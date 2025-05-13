@@ -1,0 +1,22 @@
+{
+  "copy": "Sao Chép",
+  "edit": "Chỉnh sửa",
+  "regenerate": "Tạo lại",
+  "ai_placeholder": "Chỉnh sửa promt của AI ở đây",
+  "user_placeholder": "Chỉnh sửa promt của bạn ở đây",
+  "done": "Xong",
+  "settings": "Cài đặt",
+  "credit": "Phát triển bởi Nekitori17 với Vue 3 và Naive UI",
+  "settings:general": "Chung",
+  "settings:data": "Dữ liệu",
+  "settings:account": "Tài khoản",
+  "settings:theme": "Giao diện",
+  "settings:theme:light": "Sáng",
+  "settings:theme:dark": "Tối",
+  "settings:language": "Ngôn ngữ",
+  "settings:languages:english": "Tiếng Anh",
+  "settings:languages:vietnamese": "Tiếng Việt",
+  "settings:token-count": "Số lượng token",
+  "settings:tempurature": "Nhiệt độ",
+  "settings:top-p": "Top P"
+}

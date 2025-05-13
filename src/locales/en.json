@@ -1,0 +1,22 @@
+{
+  "copy": "Copy",
+  "edit": "Edit",
+  "regenerate": "Regenerate",
+  "ai_placeholder": "Edit AI's promt here",
+  "user_placeholder": "Edit your promt here",
+  "done": "Done",
+  "settings": "Settings",
+  "credit": "Developed By Nekitori17 With Vue 3 and Naive UI",
+  "settings:general": "General",
+  "settings:data": "Data",
+  "settings:account": "Account",
+  "settings:theme": "Theme",
+  "settings:theme:light": "Light",
+  "settings:theme:dark": "Dark",
+  "settings:language": "Language",
+  "settings:languages:english": "English",
+  "settings:languages:vietnamese": "Vietnamese",
+  "settings:token-count": "Token Count",
+  "settings:tempurature": "Temperature",
+  "settings:top-p": "Top P"
+}
