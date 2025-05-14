@@ -8,7 +8,7 @@ import vi from "./locales/vi.json"
 const i18n = createI18n({
   legacy: false,
   globalInjection: true,
-  locale: localStorage.getItem("language") || "vi",
+  locale: localStorage.getItem("appLanguage") || "en",
   fallbackLocale: "en",
   messages: {
     en,

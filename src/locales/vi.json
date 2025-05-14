@@ -16,7 +16,18 @@
   "settings:language": "Ngôn ngữ",
   "settings:languages:english": "Tiếng Anh",
   "settings:languages:vietnamese": "Tiếng Việt",
+  "settings:model": "Mô hình",
   "settings:token-count": "Số lượng token",
   "settings:tempurature": "Nhiệt độ",
-  "settings:top-p": "Top P"
+  "settings:top-p": "Top P",
+  "settings:account:export": "Xuất dữ liệu",
+  "settings:account:exportButton": "Xuất",
+  "settings:account:export:success": "Xuất dữ liệu thành công",
+  "settings:account:import": "Nhập dữ liệu",
+  "settings:account:importButton": "Nhập",
+  "settings:account:import:success": "Nhập dữ liệu thành công",
+  "settings:account:logout": "Đăng xuất trên thiết bị này",
+  "settings:account:logoutButton": "Đăng xuất",
+  "settings:account:logout:confirm": "Bạn có chắc chắn muốn đăng xuất không?",
+  "settings:account:logout:success": "Đăng xuất thành công"
 }

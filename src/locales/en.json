@@ -16,7 +16,18 @@
   "settings:language": "Language",
   "settings:languages:english": "English",
   "settings:languages:vietnamese": "Vietnamese",
+  "settings:model": "Model",
   "settings:token-count": "Token Count",
   "settings:tempurature": "Temperature",
-  "settings:top-p": "Top P"
+  "settings:top-p": "Top P",
+  "settings:account:exportData": "Export Data",
+  "settings:account:exportButton": "Export",
+  "settings:account:export:success": "Exported data successfully",
+  "settings:account:importData": "Import Data",
+  "settings:account:importButton": "Import",
+  "settings:account:import:success": "Imported data successfully",
+  "settings:account:logout": "Logout on this device",
+  "settings:account:logoutButton": "Logout",
+  "settings:account:logout:confirm": "Are you sure you want to logout?",
+  "settings:account:logout:success": "Logged out successfully"
 }
