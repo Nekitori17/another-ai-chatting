@@ -37,6 +37,7 @@ function handleCopy() {
         />
       </NSpace>
       <ToolsBar
+        dir-of-icon="ltr"
         :is-editing="isEditing"
         @copy="handleCopy"
         @regenerate="$emit('regenerate', props.index)"

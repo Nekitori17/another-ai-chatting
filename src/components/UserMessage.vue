@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { NCard, NFlex, NInput, NSpace } from "naive-ui";
-import { defineEmits, defineProps, ref } from "vue";
-import VueMarkdown from "vue-markdown-render";
-import ToolsBar from "./ToolsBarOfMessage.vue";
+import { NCard, NFlex, NInput, NSpace } from "naive-ui"
+import { defineEmits, defineProps, ref } from "vue"
+import VueMarkdown from "vue-markdown-render"
+import ToolsBar from "./ToolsBarOfMessage.vue"
 
 const props = defineProps<{
   index: number
@@ -35,6 +35,7 @@ function handleCopy() {
         />
       </NSpace>
       <ToolsBar
+        dir-of-icon="rtl"
         :is-editing="isEditing"
         @copy="handleCopy"
         @regenerate="$emit('regenerate', props.index)"
