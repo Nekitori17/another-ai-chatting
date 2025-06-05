@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import type { ThemeOption } from "@/types/Theme";
-import { NAvatar, NCard, NFlex, NInput, NSpace } from "naive-ui";
-import { defineEmits, defineProps, ref } from "vue";
-import VueMarkdown from "vue-markdown-render";
-import ToolsBar from "./ToolsBarOfMessage.vue";
+import type { ThemeOption } from "@/types/Theme"
+import { NAvatar, NCard, NFlex, NInput, NSpace } from "naive-ui"
+import { defineEmits, defineProps, ref, watch } from "vue"
+import VueMarkdown from "vue-markdown-render"
+import "../styles/markdown-light.css"
+import ToolsBar from "./ToolsBarOfMessage.vue"
 
 const props = defineProps<{
   avatar: string
   index: number
   message: string
-  iconTheme: ThemeOption
+  theme: ThemeOption
 }>()
 
 const emits = defineEmits<{
@@ -28,7 +29,11 @@ function handleCopy() {
   <NFlex>
     <NAvatar round :src="avatar" size="large" />
     <NCard class="card" hoverable>
-      <VueMarkdown :source="message" v-if="!isEditing" />
+      <VueMarkdown
+        :source="message"
+        v-if="!isEditing"
+        :class="{ 'markdown-light': props.theme === 'light' }"
+      />
       <NSpace vertical v-if="isEditing">
         <NInput
           class="input-message"
@@ -39,7 +44,7 @@ function handleCopy() {
         />
       </NSpace>
       <ToolsBar
-        :icon-theme="props.iconTheme"
+        :icon-theme="props.theme"
         dir-of-icon="ltr"
         :is-editing="isEditing"
         @copy="handleCopy"

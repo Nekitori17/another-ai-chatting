@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { NConfigProvider, darkTheme, lightTheme } from "naive-ui"
-import { ref, onMounted, watch, type Ref } from "vue"
+import { onMounted, ref, watch, type Ref } from "vue"
 import AIMessage from "./components/AIMessage.vue"
 import AIMesssaeLoading from "./components/AIMesssaeLoading.vue"
-import Settings from "./layouts/Settings.vue"
 import UserMessage from "./components/UserMessage.vue"
+import Settings from "./layouts/Settings.vue"
+import Chatbox from "./components/Chatbox.vue"
 import type { ThemeOption } from "./types/Theme"
 
 const showSettings = ref(false)
@@ -34,8 +35,8 @@ watch(appTheme, (newTheme) => {
 <template>
   <NConfigProvider :theme="appTheme === 'dark' ? darkTheme : lightTheme">
     <AIMesssaeLoading avatar="favicon.ico" />
-    <AIMessage avatar="favicon.ico" :index="0" message="Hello!" :icon-theme="appTheme" />
-    <UserMessage :index="1" message="Hi!" :icon-theme="appTheme" />
+    <AIMessage avatar="favicon.ico" :index="0" message="Hello!" :theme="appTheme" />
+    <UserMessage :index="1" message="Hi!" :theme="appTheme" />
     <button @click="showSettings = !showSettings">Show Settings</button>
     <Settings
       v-model:show="showSettings"
@@ -45,7 +46,7 @@ watch(appTheme, (newTheme) => {
       :token-limit="100248"
       @update:app-theme="updateAppTheme"
     />
-    
+    <Chatbox />
   </NConfigProvider>
 </template>
 

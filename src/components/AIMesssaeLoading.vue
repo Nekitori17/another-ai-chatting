@@ -12,7 +12,6 @@ const props = defineProps<{
     <NAvatar round :src="avatar" size="large" />
     <div class="skeleton">
       <NSkeleton round size="small" />
-      <NSkeleton round size="small" />
       <NSkeleton round size="small" style="width: 65%" />
     </div>
   </NFlex>
