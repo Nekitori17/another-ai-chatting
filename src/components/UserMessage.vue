@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ThemeOption } from "@/types/Theme"
 import { NCard, NFlex, NInput, NSpace } from "naive-ui"
 import { defineEmits, defineProps, ref } from "vue"
 import VueMarkdown from "vue-markdown-render"
@@ -7,6 +8,7 @@ import ToolsBar from "./ToolsBarOfMessage.vue"
 const props = defineProps<{
   index: number
   message: string
+  iconTheme: ThemeOption
 }>()
 
 const emits = defineEmits<{
@@ -35,6 +37,7 @@ function handleCopy() {
         />
       </NSpace>
       <ToolsBar
+        :icon-theme="props.iconTheme"
         dir-of-icon="rtl"
         :is-editing="isEditing"
         @copy="handleCopy"

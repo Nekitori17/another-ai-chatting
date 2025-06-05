@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { ThemeOption } from "@/types/Theme";
 import { NAvatar, NCard, NFlex, NInput, NSpace } from "naive-ui";
 import { defineEmits, defineProps, ref } from "vue";
 import VueMarkdown from "vue-markdown-render";
@@ -8,6 +9,7 @@ const props = defineProps<{
   avatar: string
   index: number
   message: string
+  iconTheme: ThemeOption
 }>()
 
 const emits = defineEmits<{
@@ -26,7 +28,7 @@ function handleCopy() {
   <NFlex>
     <NAvatar round :src="avatar" size="large" />
     <NCard class="card" hoverable>
-      <VueMarkdown :source="message" v-if="!isEditing"/>
+      <VueMarkdown :source="message" v-if="!isEditing" />
       <NSpace vertical v-if="isEditing">
         <NInput
           class="input-message"
@@ -37,6 +39,7 @@ function handleCopy() {
         />
       </NSpace>
       <ToolsBar
+        :icon-theme="props.iconTheme"
         dir-of-icon="ltr"
         :is-editing="isEditing"
         @copy="handleCopy"
@@ -67,5 +70,4 @@ function handleCopy() {
 .card:hover .function-row-buttons {
   visibility: visible;
 }
-
 </style>
